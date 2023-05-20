@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Data</title>
+</head>
+<body>
+  <h1>Your recommendation</h1>
+
+  <div>
+    <p id="show-id"></p>
+    <p id="show-name"></p>
+    <p id="overview"></p>
+    <img id="show-image" src="" alt="Show Image">
+  </div>
+
+  <script>
+    //const url = "https://api.themoviedb.org/3/movie/157336?api_key=144e7356ac0d3a69d8ea8bfa8b56c9f8"
+    const url = "https://api.themoviedb.org/3/tv/15260?api_key=144e7356ac0d3a69d8ea8bfa8b56c9f8";
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const showName = data.name
+        const overview = data.overview
+    
+        console.log("TV Show ID:", data.id)
+        console.log("Name:", showName)
+        console.log("Overview:", overview)
+    
+        document.getElementById("show-id").textContent = `TV Show ID: ${data.id}`
+        document.getElementById("show-name").textContent = `Name: ${showName}`
+        document.getElementById("overview").textContent = `Overview: ${overview}`
+        document.getElementById("show-image").src = "/images/adventure-time.jpg" // Set the source of the image element
+      })
+      .catch(error => {
+        console.log("Error occurred while fetching show data:", error)
+      })
+  </script>
+</body>
+</html>

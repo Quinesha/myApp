@@ -135,6 +135,10 @@ button[type="submit"]:hover {
 .error-message {
     color: red;
 }
+
+#show-image{
+    width: 100%;
+}
   
   
   

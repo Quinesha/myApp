@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
-
 const { engine } = require("express-handlebars")
+
 app.engine("handlebars", engine({ defaultLayout: "main" }))
 app.set("view engine", "handlebars")
 app.set("views", "views")
@@ -9,7 +9,17 @@ app.set("views", "views")
 app.use(express.static("public"))
 
 app.use(express.urlencoded({ extended: true }))
-// to parse the form data
+
+// Define your API endpoints
+app.get("/api/users", (req, res) => {
+	// Handle GET request to /api/users endpoint
+	res.json({ message: "GET /api/users" })
+})
+  
+app.post("/api/users", (req, res) => {
+	// Handle POST request to /api/users endpoint
+	res.json({ message: "POST /api/users" })
+})
 
 app.listen(8080, () => {
 	console.log("server is at port 8080", 8080)
@@ -69,7 +79,7 @@ app.post("/login", (req, res) => {
 
 const mongoose = require("mongoose")
 
-// Replace 'YOUR_CONNECTION_STRING' with your actual MongoDB connection string
+//connect to mongoose using an mongodb connection string
 mongoose.connect("mongodb+srv://Quinesha:mewmew@cluster0.dxzuovb.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(() => {
 		console.log("Connected to the database")
@@ -85,7 +95,8 @@ const newUser = new User({
 	email: "quinesha@hotmail.com",
 	age: 23
 })
-    
+   
+//create new user
 newUser.save()
 	.then(() => {
 		console.log("User created successfully")
@@ -94,7 +105,9 @@ newUser.save()
 		console.error("Error creating user:", error)
 	})
 
-// eslint-disable-next-line no-unused-vars
-app.use((req, res, next) => {
+
+
+//404 page
+app.use((req, res) => {
 	res.status(404).render("404", { imagePath: "/images/404.png" })
 })
