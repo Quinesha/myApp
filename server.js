@@ -42,11 +42,12 @@ mongoose
 	.then(() => {
 		console.log("Connected to the database")
 
-		// Routing 
+		// Routing
 		app.get("/", (req, res) => {
 			const errorMessage = req.session.error
 			req.session.error = "" // Clear the error message from the session
-			res.render("index", { error: errorMessage })
+			const username = req.session.loggedIn ? req.session.username : "" // Get the username from the session
+			res.render("index", { error: errorMessage, username: username })
 		})
 
 		app.get("/guest", (req, res) => {
@@ -85,7 +86,8 @@ mongoose
 			// Check if the user is logged in
 			if (req.session.loggedIn) {
 				// Render the savedShows view
-				res.render("savedShows")
+				const username = req.session.username
+				res.render("savedShows", { username: username })
 			} else {
 				// User is not logged in, redirect to the login page
 				res.redirect("/login")
@@ -93,7 +95,10 @@ mongoose
 		})
 
 		app.get("/login", (req, res) => {
-			res.render("login")
+			const errorMessage = req.session.error
+			req.session.error = "" // Clear the error message from the session
+			const username = req.session.loggedIn ? req.session.username : "" // Get the username from the session
+			res.render("login", { error: errorMessage, username: username })
 		})
 
 		app.get("/signUp", (req, res) => {
@@ -146,6 +151,7 @@ mongoose
 					.save()
 					.then(() => {
 						req.session.loggedIn = true
+						req.session.username = username
 						req.session.save(() => {
 							res.redirect("/savedShows")
 						})
@@ -175,6 +181,7 @@ mongoose
 							if (result) {
 								// Password matches, set loggedIn session variable to true
 								req.session.loggedIn = true
+								req.session.username = username
 								req.session.save(() => {
 									res.redirect("/savedShows")
 								})
