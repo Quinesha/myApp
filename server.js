@@ -42,7 +42,7 @@ mongoose
 	.then(() => {
 		console.log("Connected to the database")
 
-		// Routing (place routing code inside the connection callback to ensure database connection is established before using the User model)
+		// Routing 
 		app.get("/", (req, res) => {
 			const errorMessage = req.session.error
 			req.session.error = "" // Clear the error message from the session
