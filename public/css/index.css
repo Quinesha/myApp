@@ -105,7 +105,7 @@ button[type="submit"]:hover {
     margin-top: 2em;
 }
 
-#guestButton{
+.formButton{
     background-color: #9375c3;
     text-decoration: none;
     border: none;
@@ -137,7 +137,7 @@ button[type="submit"]:hover {
 }
 
 #show-image{
-    width: 100%;
+    width: 50%;
 }
   
   
