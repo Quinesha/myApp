@@ -85,7 +85,7 @@ We would like to acknowledge the following contributors for their valuable contr
 - [Quinesha](https://github.com/Quinesha)
 For creating the app.
 
--[Sabrina](https://github.com/SabrinaTurker)
+- [Sabrina](https://github.com/SabrinaTurker)
 For supporting and helping Quinesha during the creation of myApp
 
 - [ChatGPT](https://chat.openai.com)
@@ -99,6 +99,3 @@ Happy cartoon watching!
 
 Best regards,
 Quinesha
-```
-
-You can simply copy the entire text and paste it into your README file on GitHub. Remember to replace `"https://github.com/your-username/myApp.git"` with the actual URL of your GitHub repository.
