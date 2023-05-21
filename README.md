@@ -16,12 +16,14 @@ myApp is an experimental application that empowers users to personalize their ca
 
 ## Tools
 * Node.js
+* nodemon
 * Express/Express-Handlebars
 * CSS
 * JavaScript
 * MongoDB/Mongoose
 * Adobe XD
 * bcrypt
+* ESLint
 
 ## Target Audience
 
