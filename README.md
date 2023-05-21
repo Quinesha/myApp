@@ -89,7 +89,7 @@ For creating the app.
 For supporting and helping Quinesha during the creation of myApp
 
 - [ChatGPT](https://chat.openai.com)
-For answering all questions regarding the app that no one else had the answers to.
+For answering all questions regarding the app and reserach that no one else had the answers to.
 
 If you have any questions, feedback, or need assistance, please feel free to reach out. 
 you can reach me at: quinesha@hotmail.nl
