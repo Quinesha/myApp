@@ -14,6 +14,15 @@ myApp is an experimental application that empowers users to personalize their ca
 
 - **Explore a Vast Library**: Discover new cartoon shows from a curated collection across various genres.
 
+## Tools
+* Node.js
+* Express/Express-Handlebars
+* CSS
+* JavaScript
+* MongoDB/Mongoose
+* Adobe XD
+* bcrypt
+
 ## Target Audience
 
 myApp is primarily targeted towards teenagers and young adults who are passionate about cartoons and animated shows. However, individuals of all age groups who enjoy animated entertainment can also benefit from using myApp.
