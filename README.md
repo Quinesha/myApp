@@ -90,7 +90,7 @@ Please ensure that your contributions adhere to the [MIT License](LICENSE).
 myApp is open-source and released under the [MIT License](LICENSE).
 
 ## Sources
-this is a list of sources I used formatted in APA style:
+This is a list of sources I used formatted in APA style:
 
 * GitHub's get started guide: [get started](https://docs.github.com/en/get-started)
 * The articles in the course: [cmda-bt](https://github.com/cmda-bt)
