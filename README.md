@@ -14,6 +14,17 @@ myApp is an experimental application that empowers users to personalize their ca
 
 - **Explore a Vast Library**: Discover new cartoon shows from a curated collection across various genres.
 
+## Tools
+* Node.js
+* nodemon
+* Express/Express-Handlebars
+* CSS
+* JavaScript
+* MongoDB/Mongoose
+* Adobe XD
+* bcrypt
+* ESLint
+
 ## Target Audience
 
 myApp is primarily targeted towards teenagers and young adults who are passionate about cartoons and animated shows. However, individuals of all age groups who enjoy animated entertainment can also benefit from using myApp.
@@ -23,7 +34,7 @@ myApp is primarily targeted towards teenagers and young adults who are passionat
 1. Clone the repository:
 
    ```
-   git clone https://github.com/your-username/myApp.git
+   git clone https://github.com/Quinesha/myApp.git
    ```
 
 2. Navigate to the project directory:
@@ -78,6 +89,23 @@ Please ensure that your contributions adhere to the [MIT License](LICENSE).
 
 myApp is open-source and released under the [MIT License](LICENSE).
 
+## Sources
+This is a list of sources I used formatted in APA style:
+
+* GitHub's get started guide: [get started](https://docs.github.com/en/get-started)
+* The articles in the course: [cmda-bt](https://github.com/cmda-bt)
+* freeCodeCamp. (n.d.). Introduction to Git and GitHub. Retrieved from [https://www.freecodecamp.org/news/introduction-to-git-and-github/](https://www.freecodecamp.org/news/introduction-to-git-and-github/)
+* Handlebars. (n.d.). Guide. Retrieved from [https://handlebarsjs.com/guide/#what-is-handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
+* EJS. (n.d.). About EJS. Retrieved from [https://ejs.co/#about](https://ejs.co/#about)
+* Esterling Accime. (2018, August 17). Handlebars tutorials [Video file]. Retrieved from [https://www.youtube.com/watch?v=erfN7fH7A6s&list=PLurIMwd6GdCi3ssXNAcjZ2l5mYaTfYPhf](https://www.youtube.com/watch?v=erfN7fH7A6s&list=PLurIMwd6GdCi3ssXNAcjZ2l5mYaTfYPhf)
+* freeCodeCamp. (2023, February 6). The API class [Video file]. Retrieved from [https://www.youtube.com/watch?v=WXsD0ZgxjRw&t=3001s](https://www.youtube.com/watch?v=WXsD0ZgxjRw&t=3001s)
+* Mafia Codes. (2019, December 2). MongoDB tutorial [Video file]. Retrieved from [https://www.youtube.com/watch?v=uKWAvwtfsoc](https://www.youtube.com/watch?v=uKWAvwtfsoc)
+* Mafia Codes. (2019, December 13). Env variables tutorial [Video file]. Retrieved from [https://www.youtube.com/watch?v=x-SdEjcRPEw&list=PLdHg5T0SNpN3EoN3PEyCmPR42Ok_44OFT&index=20](https://www.youtube.com/watch?v=x-SdEjcRPEw&list=PLdHg5T0SNpN3EoN3PEyCmPR42Ok_44OFT&index=20)
+* New Age coder. (2022, March 29). Mongoose tutorial [Video file]. Retrieved from [https://www.youtube.com/watch?v=sx2zTNiaBuM](https://www.youtube.com/watch?v=sx2zTNiaBuM)
+* Stack Overflow. (n.d.). Retrieved from [https://stackoverflow.com/](https://stackoverflow.com/)
+* OpenAI. (2021). ChatGPT (Version GPT-3.5) [Computer software]. Retrieved from [https://chat.openai.com/](https://chat.openai.com/)
+* Sabrina Türker (personal communication, 2023, May 19).
+
 ## Acknowledgments
 
 We would like to acknowledge the following contributors for their valuable contributions to myApp:
@@ -89,13 +117,11 @@ For creating the app.
 For supporting and helping Quinesha during the creation of myApp
 
 - [ChatGPT](https://chat.openai.com)
-For answering all questions regarding the app that no one else had the answers to.
+For answering all questions regarding the app and research that no one else had the answers to.
 
 If you have any questions, feedback, or need assistance, please feel free to reach out. 
 you can reach me at: quinesha@hotmail.nl
 or: https://www.linkedin.com/in/quinesha/
 
-Happy cartoon watching!
-
-Best regards,
-Quinesha
+I hope you like it!
+~Quinesha
