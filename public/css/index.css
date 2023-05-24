@@ -132,6 +132,14 @@ button[type="submit"]:hover {
     width: 92%;
 }
 
+.formButton:hover{
+    background-color: #1c055b;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
 .quizButton {
     background-color: #9375c3;
     text-decoration: none;
@@ -145,7 +153,11 @@ button[type="submit"]:hover {
     width: 52%;
     margin: 1em auto;
 }
-  
+
+.quizButton:hover {
+    background-color: #1c055b;
+}
+
 .error-message {
     color: red;
 }
