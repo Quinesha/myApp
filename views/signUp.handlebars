@@ -1,40 +1,48 @@
-<h1>You are currently a guest. Create an account to save this show</h1>
+<body>
+    <h1>You are currently a guest. Create an account to save this show</h1>
 
-<form action="/signup" method="POST">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="username">Age:</label>
-        <input type="text" id="age" name="age" required>
-    </div>
-    <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-    </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-    </div>
+    <form action="/signup" method="POST">
+        {{#if error}}
+            <p class="error-message">{{error}}</p>
+        {{/if}} 
+        
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
 
-    {{#if error}}
-        <p class="error-message">{{error}}</p>
-    {{/if}} 
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
 
-    <div>
-        <button id="signUp" type="submit">Sign Up</button>
-    </div>
-    <div>
-        <p>Already have an account?</p>
-        <a class="formButton" href="/" id="loginButton" type="button">Log In</a>
-    </div>
-</form>
+        <div>
+            <label for="username">Age:</label>
+            <input type="text" id="age" name="age" required>
+        </div>
+
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+
+        <div>
+            <button id="signUp" type="submit">Sign Up</button>
+        </div>
+        
+        <div>
+            <p>Already have an account?</p>
+            <a class="formButton" href="/" id="loginButton" type="button">Log In</a>
+        </div>
+    </form>   
+</body>

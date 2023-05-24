@@ -5,7 +5,7 @@ const session = require("express-session")
 const bcrypt = require("bcryptjs")
 const mongoose = require("mongoose")
 
-// Define the User schema
+// The User schema defined
 const userSchema = new mongoose.Schema({
 	name: String,
 	email: String,
@@ -113,30 +113,30 @@ mongoose
 		// Signup as a new user
 		app.post("/signup", (req, res) => {
 			const { username, password, confirmPassword, name, email, age } = req.body
-
+		
 			// Check if username is filled in
 			if (!username) {
 				req.session.error = "Username is required"
-				res.redirect("/")
+				res.redirect("/signup") // Redirect to the signup page
 				return
 			}
-
+		
 			// Check if password and confirm password match
 			if (password !== confirmPassword) {
 				req.session.error = "Passwords do not match"
-				res.redirect("/")
+				res.render("signUp", { error: req.session.error }) // Render the signup page with the error message
 				return
 			}
-
+		
 			// Hash the password
 			bcrypt.hash(password, 10, (err, hashedPassword) => {
 				if (err) {
 					console.error("Error hashing password:", err)
 					req.session.error = "Failed to create user"
-					res.redirect("/")
+					res.redirect("/signup") // Redirect to the signup page
 					return
 				}
-
+		
 				// Create a new user object with the filled-in information
 				const newUser = new User({
 					name: name,
@@ -145,7 +145,7 @@ mongoose
 					username: username,
 					password: hashedPassword,
 				})
-
+		
 				// Save the new user to the database
 				newUser
 					.save()
@@ -164,10 +164,11 @@ mongoose
 						} else {
 							req.session.error = "Failed to create user"
 						}
-						res.redirect("/")
+						res.render("signUp", { error: req.session.error }) // Render the signup page with the error message
 					})
 			})
 		})
+		
 
 		app.post("/login", (req, res) => {
 			const { username, password } = req.body
@@ -176,7 +177,7 @@ mongoose
 			User.findOne({ username: username })
 				.then((user) => {
 					if (user) {
-						// User found, compare the provided password with the hashed password
+						// if user found compare the provided password with the hashed password
 						bcrypt.compare(password, user.password, (error, result) => {
 							if (result) {
 								// Password matches, set loggedIn session variable to true
@@ -220,3 +221,5 @@ mongoose
 	.catch((error) => {
 		console.error("Error connecting to the database:", error)
 	})
+
+	

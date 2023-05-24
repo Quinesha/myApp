@@ -1,8 +1,8 @@
 <head><link rel="stylesheet" href="/../myApp/public/css/index.css"></head>
 
 <body class="background-image">
-    <h1 id="logo">Logo</h1>
-    <h2 id="h2-index">Welcome to the owl house!</h2>
+    <h1 id="logo">myApp</h1>
+    <h2 id="h2-index">Welcome to myApp!</h2>
     <h3 id="h3-index">please login or continue as a guest</h3>
 
     <form action="/login" method="POST">
@@ -10,21 +10,19 @@
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
         </div>
+
         <div>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             {{#if error}}
-            <p class="error-message">{{error}}</p>
+                <p class="error-message">{{error}}</p>
             {{/if}}
         </div>
-        
-        {{!-- <div>
-            <label for="avatar">Avatar:</label>
-            <input type="file" id="avatar" name="avatar">
-        </div>--}}
+
         <div>
             <button id="signUp" type="submit">Login</button>
         </div>
+
         <h4>Or</h4>
         <a href="/guest" class="formButton" type="submit">Continue as guest</a>
     </form>
