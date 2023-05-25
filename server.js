@@ -5,6 +5,9 @@ const session = require("express-session")
 const bcrypt = require("bcryptjs")
 const mongoose = require("mongoose")
 
+require("dotenv").config()
+
+
 // The User schema defined
 const userSchema = new mongoose.Schema({
 	name: String,
@@ -24,7 +27,7 @@ app.set("views", "views")
 // Configure session
 app.use(
 	session({
-		secret: "your-secret-key",
+		secret: process.env.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: false,
 	})
@@ -35,7 +38,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Connect to MongoDB using a MongoDB connection string
 mongoose
-	.connect("mongodb+srv://Quinesha:mewmew@cluster0.dxzuovb.mongodb.net/?retryWrites=true&w=majority", {
+	.connect(process.env.DB_CONNECTION_STRING, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
