@@ -1,15 +1,24 @@
 <head>
   <title>Show Data</title>
 </head>
-<body>
-  <h1>Your recommendations</h1>
+<!-- results.handlebars -->
+<div>
+  <h1>Quiz Results</h1>
+<div id="show-data">
+  <!-- Fetched show data will be appended here -->
+</div>
 
-  <div id="show-data"></div>
+<!-- results.handlebars -->
 
-  <div>
-    <a class="quizButton" href="quiz">Retake the quiz</a>
-    <h2>or</h2>
-    <a class="quizButton" href="signUp">Save results</a>
-  </div>
-</body>
+<h1>{{ ../showName }}</h1>
+<p>{{ ../showOverview }}</p>
+
+<form action="/addShow" method="POST">
+  <input type="hidden" name="name" value="{{showName}}">
+  <input type="hidden" name="overview" value="{{showOverview}}">
+  <button type="submit" class="btn btn-primary">Add to Saved Shows</button>
+  <a class="quizButton" href="quiz">Retake the quiz</a>
+  <a class="quizButton" href="signUp">return to saved shows</a>
+</form>
+
 

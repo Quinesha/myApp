@@ -1,13 +1,25 @@
-<body>
-  <h1>These are the shows you saved</h1>
+<!-- savedShows.handlebars -->
+<h1>Welcome, {{username}}!</h1>
+<h2>Your Saved Shows:</h2>
 
-  <p>There are currently no saved shows. To add shows try:</p>
-  <a class="quizButton" href="login">Start the quiz</a>
-  <h2>or</h2>
-  <a class="quizButton" href="shows">Show list of shows</a>
+<div id="saved-images"></div>
 
-  <!-- form with a logout button -->
-  <form action="/logout" method="POST">
-    <button type="submit">Logout</button>
-  </form>
-</body>
+{{#each savedShows}}
+  <div class="show">
+    <h3>{{name}}</h3>
+    <p>{{overview}}</p>
+    <form action="/removeShow/{{_id}}" method="POST">
+    <!-- Form content goes here -->
+      <button type="submit">Remove</button>
+    </form>
+  </div>
+{{/each}}
+
+<a class="quizButton" href="login">Start the quiz</a>
+<h2>or</h2>
+<a class="quizButton" href="shows">Show list of shows</a>
+
+<!-- form with a logout button -->
+<form action="/logout" method="POST">
+  <button type="submit">Logout</button>
+</form>
