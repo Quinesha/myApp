@@ -1,15 +1,10 @@
-<!-- shows.handlebars -->
+<h1>Cartoon randomizer</h1>
+<h2>Refresh the page for a new cartoon recommendation</h2>
 
-<h1>Available Shows</h1>
-
-{{#each shows}}
-<div>
-  <h2>{{name}}</h2>
-  <p>{{overview}}</p>
-  <form action="/addShow" method="POST">
-    <input type="hidden" name="name" value="{{name}}">
-    <input type="hidden" name="overview" value="{{overview}}">
-    <button type="submit">Add to Saved Shows</button>
-  </form>
+<div id="show-data">
+  <ul id="show-list"></ul>
 </div>
-{{/each}}
+
+<a class="quizButton" href="signUp">return to saved shows</a>
+
+<script src="../public/javascript/cartoon-catalog.js"></script>

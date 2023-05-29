@@ -35,6 +35,7 @@ app.engine(
 		},
 	})
 )
+
 app.set("view engine", "handlebars")
 app.set("views", "views")
 
@@ -44,6 +45,9 @@ app.use(
 		secret: process.env.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: false,
+		cookie: {
+			maxAge: 15 * 60 * 1000, // Set the expiration time to 15 minutes in milliseconds
+		},
 	})
 )
 
@@ -278,30 +282,30 @@ mongoose
 				if (req.session.loggedIn) {
 					// Find the current user based on the session username
 					const foundUser = await User.findOne({ username: req.session.username })
-	
+		
 					if (foundUser) {
 						// Retrieve the show details from your API
 						const showId = getRandomShowId() // Replace with your logic to get the show ID
 						const apiEndpoint = `https://api.themoviedb.org/3/tv/${showId}?api_key=${process.env.API_KEY}`
-	
+		
 						// Make the API request to fetch the show data
 						https.get(apiEndpoint, async (apiRes) => {
 							let data = ""
-	
+		
 							apiRes.on("data", (chunk) => {
 								data += chunk
 							})
-	
+		
 							apiRes.on("end", async () => {
 								const show = JSON.parse(data)
-	
+		
 								// Check if the show is already saved
 								const isShowSaved = foundUser.savedShows.some(
 									(savedShow) => savedShow.name === show.name && savedShow.overview === show.overview
 								)
-	
+		
 								console.log("Received name:", show.name) // Log the received name
-	
+		
 								if (isShowSaved) {
 									// Show is already saved, redirect back to savedShows
 									console.log("Show already saved:", show.name)
@@ -312,10 +316,10 @@ mongoose
 										name: show.name,
 										overview: show.overview,
 									}
-	
+		
 									// Add the show to the user's savedShows array
 									foundUser.savedShows.push(showData)
-	
+		
 									// Save the user with the updated savedShows array
 									await foundUser.save()
 									console.log("Show saved:", show.name)
@@ -329,15 +333,16 @@ mongoose
 						res.redirect("/login")
 					}
 				} else {
-					// User is not logged in, redirect to the login page
+					// User is not logged in, redirect to the signup page
 					console.log("User not logged in")
-					res.redirect("/login")
+					res.redirect("/signUp")
 				}
 			} catch (err) {
 				console.log(err)
 				res.redirect("/savedShows")
 			}
 		})
+		
 
 		app.post("/removeShow/:showId", async (req, res) => {
 			try {
