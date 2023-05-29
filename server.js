@@ -81,22 +81,20 @@ mongoose
 
 		app.post("/quiz", (req, res) => {
 			// Process the quiz submission
-			// Here, you can add the logic to check the answers and calculate the score
-
 			// For simplicity, let's assume all answers are correct
 			const score = 5 // Total score
 			res.render("results", { score: score })
 		})
 
 		function getRandomShowId() {
-			// Replace this code with your own logic to retrieve a random show ID
+			//Retrieve a random show ID
 			const showIds = [92685, 85349, 95599, 40075, 61923, 37606, 15260, 61175, 2190, 60625] // Example show IDs
 			const randomIndex = Math.floor(Math.random() * showIds.length)
 			return showIds[randomIndex]
 		}
 
 		app.get("/results", (req, res) => {
-			// Retrieve the randomly selected showId (Replace this with your own logic)
+			// Retrieve the randomly selected showId
 			const showId = getRandomShowId()
 
 			// Construct the API endpoint URL using the showId
@@ -285,7 +283,7 @@ mongoose
 		
 					if (foundUser) {
 						// Retrieve the show details from your API
-						const showId = getRandomShowId() // Replace with your logic to get the show ID
+						const showId = getRandomShowId() 
 						const apiEndpoint = `https://api.themoviedb.org/3/tv/${showId}?api_key=${process.env.API_KEY}`
 		
 						// Make the API request to fetch the show data
@@ -386,7 +384,6 @@ mongoose
 				res.redirect("/savedShows")
 			}
 		})
-	
 
 		app.use((req, res) => {
 			res.status(404).render("404", { imagePath: "/images/404.png" })

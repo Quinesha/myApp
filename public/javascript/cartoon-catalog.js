@@ -14,9 +14,9 @@ const shows2 = [
 const apiKey2 = "144e7356ac0d3a69d8ea8bfa8b56c9f8"
 const baseUrl2 = "https://api.themoviedb.org/3/tv/"
   
-const showData = document.getElementById("show-data")
+const showData = document.getElementById("show-data2")
 const resultList = document.createElement("ul")
-resultList.id = "show-list"
+resultList.id = "show-list2"
 showData.appendChild(resultList)
   
 shows2.forEach(show => {

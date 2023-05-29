@@ -1,170 +1,188 @@
-body{
+body {
     background-color: rgb(222, 206, 238);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center; /* Center everything horizontally */
-}
-
-.results-p{
-    width: 60%;
+    text-align: center;
+  }
+  
+  .results-p {
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 1.5em;
-    margin-top: .5em;
-}
-
-
-.background-image {
+    margin-top: 0.5em;
+  }
+  
+  .background-image {
     background-image: url('../images/boiling-isles-night.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.resultImages{
+  }
+  
+  .resultImages {
     width: 50%;
     margin-bottom: 3em;
-}
-
-#logo{ 
+  }
+  
+  #logo {
     color: #faf8ff;
     display: flex;
     justify-content: center;
-    padding: .5em;
+    padding: 0.5em;
     margin: 0;
-    margin-bottom: .5em;
-}
-
-h1{
+    margin-bottom: 0.5em;
+  }
+  
+  h1 {
     margin: 1em;
     display: flex;
     justify-content: center;
-}
-
-#h1-index{
+  }
+  
+  #h1-index {
     color: #faf8ff;
-}
-
-h2{
+  }
+  
+  h2 {
     color: #000000;
     font-size: 1em;
     display: flex;
     justify-content: center;
     margin-top: 0;
-}
-
-#h2-index{
+  }
+  
+  #h2-index {
     color: #faf8ff;
-}
-
-h3{
+  }
+  
+  h3 {
     margin-top: 1em;
-    margin-bottom: .5em;
-}
-
-#h3-index{
+    margin-bottom: 0.5em;
+  }
+  
+  #h3-index {
     color: #faf8ff;
-}
-
-ul{
+  }
+  
+  ul {
     list-style: none;
     padding: 0;
-}
-
-form {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f1e6ff;
-    max-width: 400px;
-    padding: 20px;
-    margin: 5 auto; /* Center the form horizontally */
-    display: inline-block; /* Make the form only take up the necessary width */
-}
+  }
   
-label {
+  form {
+    border: 1px solid #ccc;
+    border-radius: 0.2em;
+    box-shadow: 0em 0em .3125em rgba(0, 0, 0, 0.1);
+    background-color: #f1e6ff;
+    max-width: 25em;
+    padding: 1.25em;
+    margin: .3125em auto;
+    display: inline-block;
+  }
+  
+  label {
     display: block;
     font-weight: bold;
-    margin-bottom: 10px;
-}
+    margin-bottom: .625em;
+  }
   
-input[type="text"],
-input[type="password"]{
+  input[type="text"],
+  input[type="password"] {
     border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0.1875em;
+    box-shadow: inset 0em .0625em .125em rgba(0, 0, 0, 0.1);
     display: block;
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
+    font-size: 1em;
+    padding: 0.625em;
+    margin-bottom: 1.25em;
     width: 100%;
-}
+  }
   
-button[type="submit"] {
+  button[type="submit"] {
     background-color: #9375c3;
     border: none;
-    border-radius: 3px;
+    border-radius: 0.2em;
     color: #fff;
     cursor: pointer;
     display: block;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 1em;
+    padding: 0.625em;
     width: 100%;
-}
+  }
   
-button[type="submit"]:hover {
+  button[type="submit"]:hover {
     background-color: #1c055b;
-}
-
-#signUp{
+  }
+  
+  #signUp {
     margin-top: 2em;
-}
-
-.formButton{
+  }
+  
+  .formButton {
     background-color: #9375c3;
     text-decoration: none;
     border: none;
-    border-radius: 3px;
+    border-radius: 0.2em;
     color: #fff;
     cursor: pointer;
     display: block;
-    font-size: 16px;
-    padding: 10px;
-    width: 92%;
-}
-
-.formButton:hover{
+    font-size: 1em;
+    padding: 0.625em;
+    width: 90%;
+    margin-top: 0.625em;
+  }
+  
+  .formButton:hover {
     background-color: #1c055b;
-}
-
-.question {
-    margin-bottom: 20px;
-}
-
-.quizButton {
+  }
+  
+  .question {
+    margin-bottom: 1.25em;
+  }
+  
+  .quizButton {
     background-color: #9375c3;
     text-decoration: none;
     border: none;
-    border-radius: 3px;
+    border-radius: 0.2em;
     color: #fff;
     cursor: pointer;
     display: block;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 1em;
+    padding: 0.625em;
     width: 52%;
-    margin: 1em auto;
-}
-
-.quizButton:hover {
+    margin: 0.625em auto;
+  }
+  
+  .quizButton:hover {
     background-color: #1c055b;
-}
-
-.error-message {
+  }
+  
+  .error-message {
     color: red;
-}
-
-#show-image{
+  }
+  
+  #show-image {
     width: 50%;
-}
+  }
   
+  .resultImages {
+    margin-bottom: 0;
+  }
   
+  #quizForm {
+    margin-top: 2em;
+  }
+  
+  #quizForm select {
+    margin-bottom: 2em;
+    text-align: center;
+    padding: 0.3125em;
+    font-size: 1em;
+    font-weight: bolder;
+    color: #1c055b;
+    background-color: #fbf5ff;
+    border-radius: 0.2em;
+    border-color: #1c055b;
+  }
   
