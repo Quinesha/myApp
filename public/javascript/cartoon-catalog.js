@@ -36,7 +36,6 @@ shows2.forEach(show => {
 		  <p>Overview: ${overview}</p>
 		  <img class="resultImages" src="/images/${showName.toLowerCase().replace(/\s/g, "-")}.jpg" alt="A titlecard image of the show ${showName}">
 		`
-  
 			resultList.appendChild(showElement)
 		})
 		.catch(error => {
