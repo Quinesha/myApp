@@ -86,9 +86,9 @@ mongoose
 			res.render("results", { score: score })
 		})
 
-		function getRandomShowId() {
-			//Retrieve a random show ID
-			const showIds = [92685, 85349, 95599, 40075, 61923, 37606, 15260, 61175, 2190, 60625] // Example show IDs
+		const getRandomShowId = () => {
+			// Retrieve a random show ID
+			const showIds = [92685, 85349, 95599, 40075, 61923, 37606, 15260, 61175, 2190, 60625] //show IDs
 			const randomIndex = Math.floor(Math.random() * showIds.length)
 			return showIds[randomIndex]
 		}
@@ -157,7 +157,6 @@ mongoose
 				res.render("savedShows", { username: req.session.username, savedShows: [] })
 			}
 		})
-	
 
 		app.get("/login", (req, res) => {
 			const errorMessage = req.session.error

@@ -4,19 +4,18 @@
 <!-- results.handlebars -->
 <div>
   <h1>Quiz Results</h1>
-<div id="show-data">
-  <!-- Fetched show data will be appended here -->
+  <div id="show-data">
+    <!-- Fetched show data will be appended here -->
+  </div>
+
+  <h1>{{ showName }}</h1>
+  <p>{{ showOverview }}</p>
+
+  <form action="/addShow" method="POST">
+    <input type="hidden" name="name" value="{{ showName }}">
+    <input type="hidden" name="overview" value="{{ showOverview }}">
+    <button type="submit" class="btn btn-primary">Add to Saved Shows</button>
+    <a class="formButton" href="quiz">Retake the quiz</a>
+    <a class="formButton" href="signUp">Return to saved shows</a>
+  </form>
 </div>
-
-<h1>{{ ../showName }}</h1>
-<p>{{ ../showOverview }}</p>
-
-<form action="/addShow" method="POST">
-  <input type="hidden" name="name" value="{{showName}}">
-  <input type="hidden" name="overview" value="{{showOverview}}">
-  <button type="submit" class="btn btn-primary">Add to Saved Shows</button>
-  <a class="formButton" href="quiz">Retake the quiz</a>
-  <a class="formButton" href="signUp">return to saved shows</a>
-</form>
-
-
