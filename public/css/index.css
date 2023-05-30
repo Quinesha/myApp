@@ -1,188 +1,208 @@
+/* General styling */
 body {
-    background-color: rgb(222, 206, 238);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .results-p {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 1.5em;
-    margin-top: 0.5em;
-  }
-  
-  .background-image {
-    background-image: url('../images/boiling-isles-night.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .resultImages {
-    width: 50%;
-    margin-bottom: 3em;
-  }
-  
-  #logo {
-    color: #faf8ff;
-    display: flex;
-    justify-content: center;
-    padding: 0.5em;
-    margin: 0;
-    margin-bottom: 0.5em;
-  }
-  
-  h1 {
-    margin: 1em;
-    display: flex;
-    justify-content: center;
-  }
-  
-  #h1-index {
-    color: #faf8ff;
-  }
-  
-  h2 {
-    color: #000000;
-    font-size: 1em;
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-  }
-  
-  #h2-index {
-    color: #faf8ff;
-  }
-  
-  h3 {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-  }
-  
-  #h3-index {
-    color: #faf8ff;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  form {
-    border: 1px solid #ccc;
-    border-radius: 0.2em;
-    box-shadow: 0em 0em .3125em rgba(0, 0, 0, 0.1);
-    background-color: #f1e6ff;
-    max-width: 25em;
-    padding: 1.25em;
-    margin: .3125em auto;
-    display: inline-block;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: .625em;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    border: 1px solid #ccc;
-    border-radius: 0.1875em;
-    box-shadow: inset 0em .0625em .125em rgba(0, 0, 0, 0.1);
-    display: block;
-    font-size: 1em;
-    padding: 0.625em;
-    margin-bottom: 1.25em;
-    width: 100%;
-  }
-  
-  button[type="submit"] {
-    background-color: #9375c3;
-    border: none;
-    border-radius: 0.2em;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 1em;
-    padding: 0.625em;
-    width: 100%;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #1c055b;
-  }
-  
-  #signUp {
-    margin-top: 2em;
-  }
-  
-  .formButton {
-    background-color: #9375c3;
-    text-decoration: none;
-    border: none;
-    border-radius: 0.2em;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 1em;
-    padding: 0.625em;
-    width: 90%;
-    margin-top: 0.625em;
-  }
-  
-  .formButton:hover {
-    background-color: #1c055b;
-  }
-  
-  .question {
-    margin-bottom: 1.25em;
-  }
-  
-  .quizButton {
-    background-color: #9375c3;
-    text-decoration: none;
-    border: none;
-    border-radius: 0.2em;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 1em;
-    padding: 0.625em;
-    width: 52%;
-    margin: 0.625em auto;
-  }
-  
-  .quizButton:hover {
-    background-color: #1c055b;
-  }
-  
-  .error-message {
-    color: red;
-  }
-  
-  #show-image {
-    width: 50%;
-  }
-  
-  .resultImages {
-    margin-bottom: 0;
-  }
-  
-  #quizForm {
-    margin-top: 2em;
-  }
-  
-  #quizForm select {
-    margin-bottom: 2em;
-    text-align: center;
-    padding: 0.3125em;
-    font-size: 1em;
-    font-weight: bolder;
-    color: #1c055b;
-    background-color: #fbf5ff;
-    border-radius: 0.2em;
-    border-color: #1c055b;
-  }
-  
+  background-color: rgb(222, 206, 238);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.background-image {
+  background-image: url('../images/boiling-isles-night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#logo {
+  color: #faf8ff;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: #000000;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styling for specific details */
+#h1-index {
+  color: #faf8ff;
+}
+
+#h2-index {
+  color: #faf8ff;
+}
+
+#h3-index {
+  color: #faf8ff;
+}
+
+#show-image {
+  width: 50%;
+}
+
+/* Styling error messages */
+.error-message {
+  color: red;
+}
+
+/* Styling results */
+.results-p {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
+}
+
+.resultImages {
+  margin-bottom: 0;
+}
+
+.resultImages {
+  width: 50%;
+  margin-bottom: 3em;
+}
+
+/* Styling login and signup forms */
+form {
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  box-shadow: 0em 0em .3125em rgba(0, 0, 0, 0.1);
+  background-color: #f1e6ff;
+  max-width: 25em;
+  padding: 1.25em;
+  margin: .3125em auto;
+  display: inline-block;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: .625em;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #ccc;
+  border-radius: 0.1875em;
+  box-shadow: inset 0em .0625em .125em rgba(0, 0, 0, 0.1);
+  display: block;
+  font-size: 1em;
+  padding: 0.625em;
+  margin-bottom: 1.25em;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #9375c3;
+  border: none;
+  border-radius: 0.2em;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  padding: 0.625em;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #1c055b;
+}
+
+#signUp {
+  margin-top: 2em;
+}
+
+.formButton {
+  background-color: #9375c3;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.2em;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  padding: 0.625em;
+  width: 90%;
+  margin-top: 0.625em;
+}
+
+.formButton:hover {
+  background-color: #1c055b;
+}
+
+/* Styling for the quiz*/
+.question {
+  margin-bottom: 1.25em;
+}
+
+.quizButton {
+  background-color: #9375c3;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.2em;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  padding: 0.625em;
+  width: 52%;
+  margin: 0.625em auto;
+}
+
+.quizButton:hover {
+  background-color: #1c055b;
+}
+
+#quizForm {
+  margin-top: 2em;
+}
+
+#quizForm select {
+  margin-bottom: 2em;
+  text-align: center;
+  padding: 0.3125em;
+  font-size: 1em;
+  font-weight: bolder;
+  color: #1c055b;
+  background-color: #fbf5ff;
+  border-radius: 0.2em;
+  border-color: #1c055b;
+}
+
+/* Progressive enhancement input fields */
+input:focus:required:invalid {
+  color: rgb(255, 0, 68);
+  border-color: rgb(255, 0, 68);
+  border-width: .3em;
+  border-style: solid;
+}
+
+input:focus:required:valid,
+input:focus:required:placeholder-shown {
+  border-color: rgb(18, 221, 75);
+  border-width: .3em;
+  border-style: solid;
+}
