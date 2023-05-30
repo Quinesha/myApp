@@ -384,6 +384,37 @@ mongoose
 			}
 		})
 
+		app.post("/deleteAccount", async (req, res) => {
+			try {
+			// Check if the user is logged in
+				if (req.session.loggedIn) {
+				// Find the user based on the session username
+					const foundUser = await User.findOne({ username: req.session.username })
+		
+					if (foundUser) {
+						// Delete the user from the database
+						await User.deleteOne({ username: req.session.username })
+						console.log("Account deleted:", req.session.username)
+		
+						// Log out the user and redirect to the signup page
+						req.session.destroy()
+						res.redirect("/signUp")
+					} else {
+						// User not found, redirect to the login page
+						console.log("User not found")
+						res.redirect("/login")
+					}
+				} else {
+				// User is not logged in, redirect to the signup page
+					console.log("User not logged in")
+					res.redirect("/signUp")
+				}
+			} catch (err) {
+				console.log(err)
+				res.redirect("/savedShows")
+			}
+		})
+
 		app.use((req, res) => {
 			res.status(404).render("404", { imagePath: "/images/404.png" })
 		})
