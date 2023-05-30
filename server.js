@@ -251,13 +251,13 @@ mongoose
 								})
 							} else {
 								// Password does not match
-								req.session.error = "Invalid password"
+								req.session.error = "Password or username invalid"
 								res.redirect("/")
 							}
 						})
 					} else {
 						// User not found
-						req.session.error = "User not found"
+						req.session.error = "Password or username invalid"
 						res.redirect("/")
 					}
 				})
