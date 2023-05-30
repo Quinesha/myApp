@@ -8,7 +8,6 @@ const https = require("https")
 
 app.use(express.static("public"))
 
-
 require("dotenv").config()
 
 // The User schema defined
@@ -339,7 +338,6 @@ mongoose
 				res.redirect("/savedShows")
 			}
 		})
-		
 
 		app.post("/removeShow/:showId", async (req, res) => {
 			try {
