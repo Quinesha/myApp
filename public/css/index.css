@@ -193,16 +193,16 @@ button[type="submit"]:hover {
 }
 
 /* Progressive enhancement input fields */
-input:focus:required:invalid {
-  color: rgb(255, 0, 68);
-  border-color: rgb(255, 0, 68);
-  border-width: .3em;
+input:required:invalid {
+  color: rgb(109, 47, 176);
+  border-color: rgb(109, 47, 176);
+  border-width: .2em;
   border-style: solid;
 }
 
-input:focus:required:valid,
-input:focus:required:placeholder-shown {
+input:required:valid,
+input:required:placeholder-shown {
   border-color: rgb(18, 221, 75);
-  border-width: .3em;
+  border-width: .2em;
   border-style: solid;
 }
