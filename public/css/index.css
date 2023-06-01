@@ -192,7 +192,7 @@ button[type="submit"]:hover {
   border-color: #1c055b;
 }
 
-/* Progressive enhancement input fields */
+/* Progressive enhancement input fields styling */
 input:required:invalid {
   color: rgb(109, 47, 176);
   border-color: rgb(109, 47, 176);
