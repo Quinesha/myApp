@@ -15,7 +15,9 @@
     "mongoose": "^7.1.1",
     "multer": "^1.4.5-lts.1",
     "node": "^20.1.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
   },
   "name": "myapp",
   "description": "My app for project tech.",
