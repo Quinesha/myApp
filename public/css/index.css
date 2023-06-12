@@ -15,8 +15,12 @@ body {
 
 #logo {
   color: #faf8ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.5em;
   margin: 0;
   margin-bottom: 0.5em;
@@ -24,15 +28,23 @@ body {
 
 h1 {
   margin: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 h2 {
   color: #000000;
   font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 0;
 }
 
@@ -94,7 +106,8 @@ ul {
 form {
   border: 0.06em solid #ccc;
   border-radius: 0.2em;
-  box-shadow: 0em 0em .3125em #0000001a;
+  -webkit-box-shadow: 0em 0em .3125em #0000001a;
+          box-shadow: 0em 0em .3125em #0000001a;
   background-color: #f1e6ff;
   max-width: 25em;
   padding: 1.25em;
@@ -112,7 +125,8 @@ input[type="text"],
 input[type="password"] {
   border: 0.06em solid #ccc;
   border-radius: 0.1875em;
-  box-shadow: inset 0em .0625em .125em #0000001a;
+  -webkit-box-shadow: inset 0em .0625em .125em #0000001a;
+          box-shadow: inset 0em .0625em .125em #0000001a;
   display: block;
   font-size: 1em;
   padding: 0.625em;
@@ -201,6 +215,18 @@ button[type="submit"]:hover {
 input:required:invalid {
   color: #6d2fb0;
   border-color: #6d2fb0;
+  border-width: .2em;
+  border-style: solid;
+}
+
+input:required:-moz-placeholder-shown {
+  border-color: #12dd4b;
+  border-width: .2em;
+  border-style: solid;
+}
+
+input:required:-ms-input-placeholder {
+  border-color: #12dd4b;
   border-width: .2em;
   border-style: solid;
 }
