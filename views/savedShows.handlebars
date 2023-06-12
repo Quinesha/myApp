@@ -1,31 +1,49 @@
-<!-- savedShows.handlebars -->
-<h1>Welcome, {{username}}!</h1>
-<h2>Your Saved Shows:</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Shows</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome, {{username}}!</h1>
+    <h2>Your Saved Shows:</h2>
+  </header>
 
-<div id="saved-images"></div>
+  <main>
+    <div id="saved-images"></div>
 
-{{#each savedShows}}
-  <div class="show">
-    <h3>{{name}}</h3>
-    <p class="results-p">{{overview}}</p>
-    <form action="/removeShow/{{_id}}" method="POST">
-    <!-- Form content goes here -->
-      <button type="submit">Remove</button>
-    </form>
-  </div>
-{{/each}}
+    <section id="saved-shows">
+      {{#each savedShows}}
+      <article class="show">
+        <h3>{{name}}</h3>
+        <p class="results-p">{{overview}}</p>
+        <form action="/removeShow/{{_id}}" method="POST">
+          <!-- Form content goes here -->
+          <button type="submit">Remove</button>
+        </form>
+      </article>
+      {{/each}}
+    </section>
 
-<a class="quizButton" href="login">Start the quiz</a>
-<h2>or</h2>
-<a class="quizButton" href="shows">Show list of shows</a>
+    <nav>
+      <a class="quizButton" href="login">Start the quiz</a>
+      <h2>or</h2>
+      <a class="quizButton" href="shows">Show list of shows</a>
+    </nav>
 
-<!-- form with a logout button -->
-<form action="/logout" method="POST">
-  <button type="submit">Logout</button>
-</form>
+    <section id="user-actions">
+      <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
 
-<form action="/deleteAccount" method="POST">
-  <button id="deleteBtn" type="submit">Delete Account</button>
-</form>
+      <form action="/deleteAccount" method="POST">
+        <button id="deleteBtn" type="submit">Delete Account</button>
+      </form>
+    </section>
+  </main>
 
-<script src="javascript/delete-account.js"></script>
+  <script src="javascript/delete-account.js"></script>
+</body>
+</html>

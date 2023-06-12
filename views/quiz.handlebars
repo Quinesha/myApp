@@ -1,45 +1,70 @@
-<!-- quiz.handlebars -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+</head>
 
-<form id="quizForm" action="/quiz" method="POST">
-  <label for="age">How old are you?</label>
-  <select id="age" name="age">
-    <option value="12-14">12-14</option>
-    <option value="15-17">15-17</option>
-    <option value="18-25">18-25</option>
-    <option value="25+">25+</option>
-  </select>
+<body>
+  <header>
+    <h1>Cartoon quiz</h1>
+  </header>
 
-  <label for="cartoons">What type of cartoons do you like?</label>
-  <select id="cartoons" name="cartoons">
-    <option value="Adventure">Adventure</option>
-    <option value="Slice of Life">Slice of Life</option>
-    <option value="Fantasy">Fantasy</option>
-    <option value="All">All of them</option>
-  </select>
+  <main>
+    <form id="quizForm" action="/quiz" method="POST">
+      <fieldset>
+        <label>How old are you?</label>
+        <select id="age" name="age">
+          <option value="12-14">12-14</option>
+          <option value="15-17">15-17</option>
+          <option value="18-25">18-25</option>
+          <option value="25+">25+</option>
+        </select>
+      </fieldset>
 
-  <label for="duration">How long do you want the cartoon to be?</label>
-  <select id="duration" name="duration">
-    <option value="1 season">1 season</option>
-    <option value="2 seasons">2 seasons</option>
-    <option value="3 seasons">3 seasons</option>
-    <option value="More">More seasons</option>
-  </select>
+      <fieldset>
+        <label>What type of cartoons do you like?</label>
+        <select id="cartoons" name="cartoons">
+          <option value="Adventure">Adventure</option>
+          <option value="Slice of Life">Slice of Life</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="All">All of them</option>
+        </select>
+      </fieldset>
 
-  <label for="preference">What do you prefer?</label>
-  <select id="preference" name="preference">
-    <option value="Ongoing">An ongoing cartoon</option>
-    <option value="Finished">A finished cartoon</option>
-    <option value="Renewed">A cartoon that might be renewed</option>
-    <option value="All">All of the above</option>
-  </select>
+      <fieldset>
+        <label>How long do you want the cartoon to be?</label>
+        <select id="duration" name="duration">
+          <option value="1 season">1 season</option>
+          <option value="2 seasons">2 seasons</option>
+          <option value="3 seasons">3 seasons</option>
+          <option value="More">More seasons</option>
+        </select>
+      </fieldset>
 
-  <label for="platform">Where do you want to watch it?</label>
-  <select id="platform" name="platform">
-    <option value="Netflix">Netflix</option>
-    <option value="Prime">Prime</option>
-    <option value="Disney">Disney</option>
-    <option value="Free">Online for free</option>
-  </select>
+      <fieldset>
+        <label>What do you prefer?</label>
+        <select id="preference" name="preference">
+          <option value="Ongoing">An ongoing cartoon</option>
+          <option value="Finished">A finished cartoon</option>
+          <option value="Renewed">A cartoon that might be renewed</option>
+          <option value="All">All of the above</option>
+        </select>
+      </fieldset>
 
-  <button type="submit">Submit</button>
-</form>
+      <fieldset>
+        <label>Where do you want to watch it?</label>
+        <select id="platform" name="platform">
+          <option value="Netflix">Netflix</option>
+          <option value="Prime">Prime</option>
+          <option value="Disney">Disney</option>
+          <option value="Free">Online for free</option>
+        </select>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>

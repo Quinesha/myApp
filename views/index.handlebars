@@ -1,27 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myApp</title>
+</head>
+
 <body class="background-image">
+  <header>
     <h1 id="logo">myApp</h1>
+  </header>
+
+  <main>
     <h2 id="h2-index">Welcome to myApp!</h2>
     <h3 id="h3-index">Please login or continue as a guest</h3>
 
     <form action="/login" method="POST">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
+      <fieldset>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        {{#if error}}
+        <p class="error-message">{{error}}</p>
+        {{/if}}
 
         <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            {{#if error}}
-                <p class="error-message">{{error}}</p>
-            {{/if}}
-        </div>
-
-        <div>
-            <button id="signUp" type="submit">Login</button>
+            <button id="loginButton" type="submit">Login</button>
         </div>
 
         <h4>Or</h4>
-        <a href="/guest" class="formButton" type="submit">Continue as guest</a>
+
+        <nav>
+          <ul>
+            <li><a class="formButton" href="/guest">Continue as guest</a></li>
+          </ul>
+        </nav>
+
+      </fieldset>
     </form>
+  </main>
 </body>
+
+</html>
+

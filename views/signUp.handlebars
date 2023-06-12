@@ -1,51 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Signup</title>
+</head>
+
 <body>
+  <header>
     <h1>You are currently a guest. Create an account to save this show</h1>
+  </header>
 
+  <main>
     <form id="signupForm" action="/signup" method="POST">
-        {{#if error}}
-            <p class="error-message">{{error}}</p>
-        {{/if}} 
-        
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
+      {{#if error}}
+        <p class="error-message">{{error}}</p>
+      {{/if}}
 
-        <div>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
-        </div>
+      <section>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </section>
 
-        <div>
-            <label for="age">Age:</label>
-            <input type="text" id="age" name="age" required>
-        </div>
+      <section>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+      </section>
 
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
+      <section>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+      </section>
 
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        
-        <div>
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-        </div>
+      <section>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </section>
 
-        <div>
-            <button id="signUp" type="submit">Sign Up</button>
-        </div>
-        
-        <div>
-            <p>Already have an account?</p>
-            <a class="formButton" href="/" id="loginButton" type="button">Log In</a>
-        </div>
-    </form>   
+      <section>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </section>
 
-    <script src="javascript/signup.js"></script>
+      <section>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </section>
+
+      <section>
+        <button id="signUp" type="submit">Sign Up</button>
+      </section>
+
+      <section>
+        <p>Already have an account?</p>
+        <a class="formButton" href="/" id="loginButton" type="button">Log In</a>
+      </section>
+    </form>
+  </main>
+
+  <script src="javascript/signup.js"></script>
 </body>
-
+</html>

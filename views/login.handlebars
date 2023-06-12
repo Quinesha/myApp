@@ -1,17 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Login Success</title>
-    <link rel="stylesheet" type="text/css" href="../../myApp/static/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Success</title>
+  <link rel="stylesheet" type="text/css" href="../../myApp/static/index.css">
 </head>
 
 <body>
+  <header>
     <h1>Hello, {{#if username}}{{username}}{{else}}Guest{{/if}}!</h1>
+  </header>
+
+  <main>
     <p>Welcome to the quiz</p>
-    <p> Please answer a short questionaire about <br> what you would like to watch.</p>
+    <p> Please answer a short questionnaire about<br> what you would like to watch.</p>
 
     <div>
-        <a class="quizButton" href="quiz">Start the quiz</a>
+      <a class="quizButton" href="quiz">Start the quiz</a>
     </div>
+  </main>
 </body>
+</html>
+
 
 
 

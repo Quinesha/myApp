@@ -1,21 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Show Data</title>
 </head>
-<!-- results.handlebars -->
-<div>
-  <h1>Quiz Results</h1>
-  <div id="show-data">
-    <!-- Fetched show data will be appended here -->
-  </div>
 
-  <h1>{{ showName }}</h1>
-  <p>{{ showOverview }}</p>
+<body>
+  <header>
+    <h1>Show Results</h1>
+  </header>
 
-  <form action="/addShow" method="POST">
-    <input type="hidden" name="name" value="{{ showName }}">
-    <input type="hidden" name="overview" value="{{ showOverview }}">
-    <button type="submit" class="btn btn-primary">Add to Saved Shows</button>
-    <a class="formButton" href="quiz">Retake the quiz</a>
-    <a class="formButton" href="signUp">Return to saved shows</a>
-  </form>
-</div>
+  <main>
+    <section id="show-data">
+      <h2>Quiz Results</h2>
+      <!-- Fetched show data will be appended here -->
+    </section>
+
+    <section id="show-details">
+      <h2>{{ showName }}</h2>
+      <p>{{ showOverview }}</p>
+    </section>
+
+    <form action="/addShow" method="POST">
+      <input type="hidden" name="name" value="{{ showName }}">
+      <input type="hidden" name="overview" value="{{ showOverview }}">
+      <button type="submit">Add to Saved Shows</button>
+      <a class="formButton" href="quiz">Retake the quiz</a>
+      <a class="formButton" href="signUp">Return to saved shows</a>
+    </form>
+  </main>
+</body>
+</html>
