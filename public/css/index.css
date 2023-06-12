@@ -1,6 +1,6 @@
 /* General styling */
 body {
-  background-color: rgb(222, 206, 238);
+  background-color: #deceee;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -65,7 +65,7 @@ ul {
 
 /* Styling error messages */
 .error-message {
-  color: red;
+  color: #ff0000;
 }
 
 /* Styling results */
@@ -87,9 +87,9 @@ ul {
 
 /* Styling login and signup forms */
 form {
-  border: 1px solid #ccc;
+  border: 0.06em solid #ccc;
   border-radius: 0.2em;
-  box-shadow: 0em 0em .3125em rgba(0, 0, 0, 0.1);
+  box-shadow: 0em 0em .3125em #0000001a;
   background-color: #f1e6ff;
   max-width: 25em;
   padding: 1.25em;
@@ -105,9 +105,9 @@ label {
 
 input[type="text"],
 input[type="password"] {
-  border: 1px solid #ccc;
+  border: 0.06em solid #ccc;
   border-radius: 0.1875em;
-  box-shadow: inset 0em .0625em .125em rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0em .0625em .125em #0000001a;
   display: block;
   font-size: 1em;
   padding: 0.625em;
@@ -194,15 +194,15 @@ button[type="submit"]:hover {
 
 /* Progressive enhancement input fields styling */
 input:required:invalid {
-  color: rgb(109, 47, 176);
-  border-color: rgb(109, 47, 176);
+  color: #6d2fb0;
+  border-color: #6d2fb0;
   border-width: .2em;
   border-style: solid;
 }
 
 input:required:valid,
 input:required:placeholder-shown {
-  border-color: rgb(18, 221, 75);
+  border-color: #12dd4b;
   border-width: .2em;
   border-style: solid;
 }
