@@ -104,6 +104,7 @@ This is a list of sources I used formatted in APA style:
 * New Age coder. (2022, March 29). Mongoose tutorial [Video file]. Retrieved from [https://www.youtube.com/watch?v=sx2zTNiaBuM](https://www.youtube.com/watch?v=sx2zTNiaBuM)
 * Stack Overflow. (n.d.). Retrieved from [https://stackoverflow.com/](https://stackoverflow.com/)
 * OpenAI. (2021). ChatGPT (Version GPT-3.5) [Computer software]. Retrieved from [https://chat.openai.com/](https://chat.openai.com/)
+* Autoprefixer. (2023, June 12). Autoprefixer. GitHub. https://autoprefixer.github.io
 * Sabrina Türker (personal communication, 2023, May 19).
 
 ## Acknowledgments
