@@ -417,7 +417,7 @@ mongoose
 			res.status(404).render("404", { imagePath: "/images/404.png" })
 		})
 
-		const PORT = process.env.PORT || 8080
+		const PORT = process.env.PORT || 8000
 		app.listen(PORT, () => {
 			console.log(`Server listening on port ${PORT}`)
 		})
