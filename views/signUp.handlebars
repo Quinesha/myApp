@@ -39,12 +39,19 @@
 
       <fieldset>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+          <p>Password has to:</p>
+            <ul>
+              <li>Be 8 symbols or longer,</li>
+              <li>Contain 1 uppercase letter</li>
+              <li>Contain 1 lowercase letter</li>
+              <li>Contain 1 symbol such as #, $, or @.</li>
+            </ul> 
+        <input type="password" id="wachtwoord" name="wachtwoord" pattern="(?=.*[A-Z])(?=.*[#@$])(?=.*[a-z]).{8,}" required />
       </fieldset>
 
       <fieldset>
         <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <input type="password" id="confirmPassword" name="confirmPassword" pattern="(?=.*[A-Z])(?=.*[#@$])(?=.*[a-z]).{8,}" required>
       </fieldset>
 
       <section>
