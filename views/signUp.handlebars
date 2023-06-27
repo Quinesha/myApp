@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guest Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -39,19 +40,26 @@
 
       <fieldset>
         <label for="password">Password:</label>
-          <p>Password has to:</p>
-            <ul>
-              <li>Be 8 symbols or longer,</li>
-              <li>Contain 1 uppercase letter</li>
-              <li>Contain 1 lowercase letter</li>
-              <li>Contain 1 symbol such as #, $, or @.</li>
-            </ul> 
-        <input type="password" id="wachtwoord" name="wachtwoord" pattern="(?=.*[A-Z])(?=.*[#@$])(?=.*[a-z]).{8,}" required />
+        <p>Password requirements:</p>
+        <ul>
+          <li>Contains 8 symbols or longer,</li>
+          <li>Contains 1 uppercase letter</li>
+          <li>Contains 1 lowercase letter</li>
+          <li>Contains 1 symbol such as #, $, or @.</li>
+        </ul> 
+        
+        <div class="password-toggle">
+          <input type="password" id="wachtwoord" name="password" pattern="(?=.*[A-Z])(?=.*[#@$])(?=.*[a-z]).{8,}" required>
+          <i id="passwordToggleIcon" class="toggle-icon fa fa-eye" onclick="togglePasswordVisibility('passwordToggleIcon')"></i>
+        </div>
       </fieldset>
 
       <fieldset>
         <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" pattern="(?=.*[A-Z])(?=.*[#@$])(?=.*[a-z]).{8,}" required>
+        <div class="password-toggle">
+          <input type="password" id="confirmPassword" name="confirmPassword" pattern="(?=.*[A-Z])(?=.*[#@$])(?=.*[a-z]).{8,}" required>
+          <i id="confirmPasswordToggleIcon" class="toggle-icon fa fa-eye" onclick="toggleConfirmPasswordVisibility()"></i>
+        </div>
       </fieldset>
 
       <section>
@@ -66,5 +74,6 @@
   </main>
 
   <script src="javascript/signup.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 </html>

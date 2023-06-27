@@ -37,4 +37,37 @@ const getFormData = () => {
 	})
 	return formData
 }
+
+// toggle password visibility 
+
+const togglePasswordVisibility = (toggleIconId) => {
+	const passwordInput = document.getElementById("wachtwoord")
+	const toggleIcon = document.getElementById(toggleIconId)
   
+	if (passwordInput.type === "password") {
+		passwordInput.type = "text"
+		toggleIcon.classList.remove("fa-eye")
+		toggleIcon.classList.add("fa-eye-slash")
+	} else {
+		passwordInput.type = "password"
+		toggleIcon.classList.remove("fa-eye-slash")
+		toggleIcon.classList.add("fa-eye")
+	}
+}
+  
+  
+const toggleConfirmPasswordVisibility = () => {
+	const confirmPasswordInput = document.getElementById("confirmPassword")
+	const toggleIcon = document.getElementById("confirmPasswordToggleIcon")
+  
+	if (confirmPasswordInput.type === "password") {
+		confirmPasswordInput.type = "text"
+		toggleIcon.classList.remove("fa-eye")
+		toggleIcon.classList.add("fa-eye-slash")
+	} else {
+		confirmPasswordInput.type = "password"
+		toggleIcon.classList.remove("fa-eye-slash")
+		toggleIcon.classList.add("fa-eye")
+	}
+}
+   
