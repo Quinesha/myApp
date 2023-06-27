@@ -25,7 +25,8 @@ myApp is an experimental application that empowers users to personalize their ca
 * bcrypt
 * ESLint
 * gulp
-* yargs 
+* yargs
+* Sass
 
 ## Target Audience
 
