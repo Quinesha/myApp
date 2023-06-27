@@ -41,7 +41,7 @@ const getFormData = () => {
 // toggle password visibility 
 
 const togglePasswordVisibility = (toggleIconId) => {
-	const passwordInput = document.getElementById("wachtwoord")
+	const passwordInput = document.getElementById("password")
 	const toggleIcon = document.getElementById(toggleIconId)
   
 	if (passwordInput.type === "password") {

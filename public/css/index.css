@@ -13,6 +13,12 @@ body {
   background-size: cover;
 }
 
+.background-image2 {
+  background-image: url('../images/isles.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #logo {
   color: #faf8ff;
   display: -webkit-box;
@@ -27,6 +33,17 @@ body {
 }
 
 h1 {
+  margin: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.h1-white {
+  color: #ffff;
   margin: .5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,8 +75,9 @@ fieldset{
   padding: 0;
 }
 
-fieldset p, ul{
+fieldset p, #signup-ul{
   text-align: left;
+  margin-left: .1em;
 }
 
 ul {
@@ -119,10 +137,25 @@ form {
   display: inline-block;
 }
 
+#loginForm{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 label {
   display: block;
   font-weight: bold;
   margin-bottom: .625em;
+}
+
+#signupForm label {
+  display: block;
+  font-weight: bold;
+  margin: .625em 0 .625em .1em;
   text-align: left;
 }
 
@@ -170,7 +203,6 @@ button[type="submit"]:hover {
   display: block;
   font-size: 1em;
   padding: 0.625em;
-  width: 90%;
   margin-top: 0.625em;
 }
 
@@ -203,6 +235,12 @@ button[type="submit"]:hover {
 
 #quizForm {
   margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #quizForm select {
