@@ -8,13 +8,13 @@ body {
 }
 
 .background-image {
-  background-image: url('../images/boiling-isles-night.jpg');
+  background-image: url("../images/boiling-isles-night.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-image2 {
-  background-image: url('../images/isles.jpg');
+  background-image: url("../images/isles.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -25,32 +25,32 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0.5em;
   margin: 0;
   margin-bottom: 0.5em;
 }
 
 h1 {
-  margin: .5em;
+  margin: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .h1-white {
-  color: #ffff;
-  margin: .5em;
+  color: white;
+  margin: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 h2 {
@@ -60,8 +60,8 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 0;
 }
 
@@ -70,14 +70,14 @@ h3 {
   margin-bottom: 0.5em;
 }
 
-fieldset{
+fieldset {
   border: none;
   padding: 0;
 }
 
-fieldset p, #signup-ul{
+fieldset p, #signup-ul {
   text-align: left;
-  margin-left: .1em;
+  margin-left: 0.1em;
 }
 
 ul {
@@ -128,16 +128,16 @@ ul {
 form {
   border: 0.06em solid #ccc;
   border-radius: 0.2em;
-  -webkit-box-shadow: 0em 0em .3125em #0000001a;
-          box-shadow: 0em 0em .3125em #0000001a;
+  -webkit-box-shadow: 0em 0em 0.3125em rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0em 0em 0.3125em rgba(0, 0, 0, 0.1019607843);
   background-color: #f1e6ff;
   max-width: 25em;
   padding: 1.25em;
-  margin: .3125em auto;
+  margin: 0.3125em auto;
   display: inline-block;
 }
 
-#loginForm{
+#loginForm {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -149,23 +149,23 @@ form {
 label {
   display: block;
   font-weight: bold;
-  margin-bottom: .625em;
+  margin-bottom: 0.625em;
 }
 
 #signupForm label {
   display: block;
   font-weight: bold;
-  margin: .625em 0 .625em .1em;
+  margin: 0.625em 0 0.625em 0.1em;
   text-align: left;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="password"] {
+input[type=text],
+input[type=number],
+input[type=password] {
   border: 0.06em solid #ccc;
   border-radius: 0.1875em;
-  -webkit-box-shadow: inset 0em .0625em .125em #0000001a;
-          box-shadow: inset 0em .0625em .125em #0000001a;
+  -webkit-box-shadow: inset 0em 0.0625em 0.125em rgba(0, 0, 0, 0.1019607843);
+  box-shadow: inset 0em 0.0625em 0.125em rgba(0, 0, 0, 0.1019607843);
   display: block;
   font-size: 1em;
   padding: 0.625em;
@@ -173,7 +173,7 @@ input[type="password"] {
   width: 100%;
 }
 
-button[type="submit"] {
+button[type=submit] {
   background-color: #9375c3;
   border: none;
   border-radius: 0.2em;
@@ -185,7 +185,7 @@ button[type="submit"] {
   width: 100%;
 }
 
-button[type="submit"]:hover {
+button[type=submit]:hover {
   background-color: #1c055b;
 }
 
@@ -259,31 +259,30 @@ button[type="submit"]:hover {
 input:required:invalid {
   color: #6d2fb0;
   border-color: #6d2fb0;
-  border-width: .2em;
+  border-width: 0.2em;
   border-style: solid;
 }
 
 input:required:-moz-placeholder-shown {
   border-color: #12dd4b;
-  border-width: .2em;
+  border-width: 0.2em;
   border-style: solid;
 }
 
 input:required:-ms-input-placeholder {
   border-color: #12dd4b;
-  border-width: .2em;
+  border-width: 0.2em;
   border-style: solid;
 }
 
 input:required:valid,
 input:required:placeholder-shown {
   border-color: #12dd4b;
-  border-width: .2em;
+  border-width: 0.2em;
   border-style: solid;
 }
 
 /* password visibility */
-
 .password-toggle {
   position: relative;
 }

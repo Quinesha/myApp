@@ -21,7 +21,7 @@ gulp.task("server-uglify", () => {
 	const mangle = argv.m || argv.mangle
 	const output = argv.o || argv.output || "ugly.js"
 
-	return gulp.src("server.js")
+	return gulp.src("./server.js")
 		.pipe(uglify({ compress, mangle }))
 		.pipe(rename(output))
 		.pipe(gulp.dest("./"))
@@ -45,4 +45,4 @@ gulp.task("watch", () => {
 })
 
 // Default Task
-gulp.task("default", gulp.parallel("watch", "sass", "bundleJS"))
+gulp.task("default", gulp.parallel("watch", "sass", "bundleJS", "server-uglify"))

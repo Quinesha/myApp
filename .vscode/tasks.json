@@ -1,0 +1,17 @@
+{
+    "version" : "2.0.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "tasks": [
+        {
+            "taskName": "sass",
+            "isBuildCommand": true,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "watch",
+            "isBuildCommand": true,
+            "showOutput": "always" 
+        }
+    ]
+}
